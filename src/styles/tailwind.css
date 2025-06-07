@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #1F2937; /* Deep gray (primary) - gray-800 */
+    --color-secondary: #6B7280; /* Medium gray (secondary) - gray-500 */
+    --color-accent: #FCD34D; /* Warm yellow (accent) - yellow-300 */
+    
+    /* Background Colors */
+    --color-background: #FFFFFF; /* Pure white (background) - white */
+    --color-surface: #F9FAFB; /* Subtle gray (surface) - gray-50 */
+    
+    /* Text Colors */
+    --color-text-primary: #111827; /* Near-black (text primary) - gray-900 */
+    --color-text-secondary: #6B7280; /* Balanced gray (text secondary) - gray-500 */
+    
+    /* Status Colors */
+    --color-success: #10B981; /* Confident green (success) - emerald-500 */
+    --color-warning: #F59E0B; /* Amber (warning) - amber-500 */
+    --color-error: #EF4444; /* Clear red (error) - red-500 */
+    
+    /* Border Colors */
+    --color-border: #E5E7EB; /* Light gray (border) - gray-200 */
+    
+    /* Shadow Colors */
+    --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  * {
+    border-color: theme('colors.border');
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: theme('colors.text.primary');
+    background-color: theme('colors.background');
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: theme('colors.text.primary');
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-md font-medium transition-all duration-150 ease-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+    box-shadow: var(--shadow-medium);
+  }
+
+  .btn-secondary {
+    @apply bg-surface text-primary border border-border px-6 py-3 rounded-md font-medium transition-all duration-150 ease-out hover:scale-102 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 border border-border rounded-md bg-background text-text-primary placeholder-text-secondary transition-all duration-150 ease-out focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent;
+  }
+
+  .form-section {
+    @apply bg-surface p-6 rounded-lg border border-border;
+    box-shadow: var(--shadow-light);
+  }
+
+  .data-display {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+  }
+
+  .micro-interaction {
+    @apply transition-transform duration-150 ease-out hover:scale-102;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animation-smooth {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animation-cost-update {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
