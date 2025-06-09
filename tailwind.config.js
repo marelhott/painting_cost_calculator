@@ -7,14 +7,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Primary Colors
-        'primary': '#1F2937', // Deep gray (primary) - gray-800
-        'secondary': '#6B7280', // Medium gray (secondary) - gray-500
+        // Primary Colors - Updated to dark green
+        'primary': '#1B4332', // Dark green for header and main elements
+        'secondary': '#40916C', // Medium green for secondary elements
         'accent': '#FCD34D', // Warm yellow (accent) - yellow-300
         
         // Background Colors
         'background': '#FFFFFF', // Pure white (background) - white
-        'surface': '#F9FAFB', // Subtle gray (surface) - gray-50
+        'surface': '#F0F8FF', // Light blue surface - alice blue
         
         // Text Colors
         'text': {
@@ -31,7 +31,7 @@ module.exports = {
         'border': '#E5E7EB', // Light gray (border) - gray-200
       },
       fontFamily: {
-        'sans': ['Inter', 'sans-serif'],
+        'sans': ['Poppins', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
         'mono': ['JetBrains Mono', 'monospace'],
       },
       fontWeight: {

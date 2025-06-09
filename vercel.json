@@ -1,1 +1,8 @@
-"// /home/ubuntu/app/painting_cost_calculator/vercel.json\n{\n  \"rewrites\": [\n    { \"source\": \"/(.*)\", \"destination\": \"/index.html\" }\n  ],\n  \"buildCommand\": \"npm run build\",\n  \"outputDirectory\": \"dist\"\n}"
+// /home/ubuntu/app/painting_cost_calculator/vercel.json
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
+}
